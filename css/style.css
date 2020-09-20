@@ -1,0 +1,198 @@
+:root {
+    /* ### Primary */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    /* ### Neutral */
+    --Dark-Grayish-Magenta: hsl(302, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+main {
+    /* background-color: var(--Light-Grayish-Magenta); */
+    padding: 0 15px;
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center -38px, bottom;
+    background-size: contain;
+}
+
+.header .title-header {
+    color: var(--Very-Dark-Magenta);
+    width: 17rem;
+    margin: 0 auto;
+    padding: 2.66rem 0 0.8rem 0;
+}
+
+.header .p-header {
+    margin: 0;
+    margin-bottom: 1.66rem;
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.star {
+    /* margin-bottom: 1.66rem; */
+}
+
+.star .star-content {
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.star .star-content .star-five img:not(:last-child) {
+    /* border: 1px solid red; */
+    margin-right: .3rem;
+}
+
+.star .star-content .star-description .star-p {
+    margin: 0;
+    margin-top: .5rem;
+    font-weight: 600;
+    /* border: 1px solid red; */
+    color: var(--Very-Dark-Magenta);
+}
+
+.cards {
+    /* border: 1px solid red; */
+    text-align: left;
+    margin-top: 2.7rem;
+    padding-bottom: 3.33rem;
+}
+
+.cards .card-content {
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--Light-Grayish-Magenta);
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.cards .card-content .card-header {
+    display: flex;
+    align-items: center;
+    margin-top: 1.53rem;
+}
+
+.cards .card-content .card-header img {
+    width: 2.3rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+
+.cards .card-content .card-header .card-name h5 {
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+}
+
+.cards .card-content .card-header .card-name small {
+    color: var(--Soft-Pink);
+    letter-spacing: 1.3px;
+    font-size: .9rem;
+}
+
+.cards .card-content .card-body .card-body-content {
+    letter-spacing: 1px;
+    font-size: .85rem;
+    color: var(--Light-Grayish-Magenta);
+    opacity: .7;
+    line-height: 1.5;
+    font-weight: 300;
+    padding-right: .5rem;
+    /* border: 1px solid red; */
+}
+
+@media screen and (min-width:768px) {
+    body {
+        overflow: hidden;
+        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+        background-position: left -50px, right 50px;
+        background-repeat: no-repeat;
+    }
+    main {
+        /* border: 1px solid red; */
+        text-align: left;
+        margin-top: 4.33rem;
+        padding: 0;
+        background-image: none;
+    }
+    main .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .header {
+        width: 450px;
+        /* border: 1px solid red; */
+    }
+    .header .title-header {
+        width: none;
+        margin: 0;
+        font-weight: 700;
+    }
+    .header .p-header {
+        margin-top: 0;
+    }
+    .star .star-content {
+        display: flex;
+        align-items: center;
+        /* border: 1px solid red; */
+        width: 400px;
+    }
+    .star .star-content .star-description .star-p {
+        margin: 0;
+        margin-left: 1rem;
+        /* border: 1px solid red; */
+    }
+    .star .star-content:nth-child(2) {
+        margin-left: 35px;
+    }
+    .star .star-content:nth-child(3) {
+        margin-left: 70px;
+    }
+    .star .star-content .star-five {
+        margin-left: .8rem;
+    }
+    .cards {
+        margin-top: 1rem;
+    }
+    .cards .card-content {
+        padding: 1.3rem 2rem;
+    }
+    .cards .card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1.2rem;
+    }
+    .cards .card-grid .card-content-grid:nth-child(2) {
+        margin-top: 10px;
+    }
+    .cards .card-grid .card-content-grid:nth-child(3) {
+        margin-top: 20px;
+    }
+}
